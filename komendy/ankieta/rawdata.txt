@@ -5,9 +5,57 @@
   "_id": "YoTcy",
   "actions": [
     {
-      "comment": "Zmień nazwe custom emotki na #11 #12 i rangi #3 do permisji",
+      "comment": "Zmień nazwe custom emotki na #18 #19 i rangi #10 do permisji",
       "color": "#ff0000",
       "name": "Comment"
+    },
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "6",
+      "iffalse": "2",
+      "iffalseVal": "6",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Błąd: ${tempVars(\"prefix\")}ankieta (TYTUŁ-1SŁOWO) (OPIS ANKIETY-MIN2SLOWA)",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "9",
+      "iffalse": "2",
+      "iffalseVal": "9",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Błąd: ${tempVars(\"prefix\")}ankieta (TYTUŁ-1SŁOWO) (OPIS ANKIETY-MIN2SLOWA)",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
     },
     {
       "storage": "0",
@@ -28,10 +76,10 @@
       "role": "3",
       "varName2": "ankieta",
       "iftrue": "2",
-      "iftrueVal": "9",
+      "iftrueVal": "16",
       "iffalse": "0",
       "iffalseVal": "",
-      "name": "Check If Member has Role MOD"
+      "name": "Check If Member has Role"
     },
     {
       "title": "",
@@ -83,14 +131,14 @@
     },
     {
       "info": "1",
-      "find": "____",
+      "find": "yes",
       "storage": "1",
       "varName": "tak",
       "name": "Find Custom Emoji"
     },
     {
       "info": "1",
-      "find": "X__",
+      "find": "no",
       "storage": "1",
       "varName": "nie",
       "name": "Find Custom Emoji"
@@ -103,7 +151,7 @@
       "url": "",
       "authorIcon": "",
       "imageUrl": "",
-      "thumbUrl": "https://cdn.discordapp.com/attachments/872925783583244318/877639187787022346/emp.jpg",
+      "thumbUrl": "",
       "storage": "1",
       "varName": "wiadomoscankiety",
       "name": "Create Embed Message"
@@ -119,7 +167,7 @@
     {
       "storage": "1",
       "varName": "wiadomoscankiety",
-      "message": "**= = = [ ANKIETA ] = = =** \n\nAuthor: **${tempVars(\"memberusername\")}**\n\nTytuł: `${tempVars(\"tytul\")}`\n\nOpis: `*${tempVars(\"opis ankiety\")}*`",
+      "message": "**= = = [ ANKIETA ] = = =** \n\n🔥・ Tytuł: `${tempVars(\"tytul\")}`\n\n⚠ ・ Opis: `${tempVars(\"opis ankiety\")}`\n\n👑 ・ Author: ${member}",
       "name": "Set Embed Description"
     },
     {
