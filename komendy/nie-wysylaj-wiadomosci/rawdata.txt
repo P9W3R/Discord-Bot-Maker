@@ -1,0 +1,68 @@
+{
+  "name": "delmeschannel",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "eWjfE",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "comment": "#2 id kanału zmień!",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "880720507887042560",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}, Błąd; Nie posiadasz permisji aby wysyłać wiadomości!",
+      "storage": "1",
+      "varName2": "ez",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "ez",
+      "reason": "ez",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "3"
+}

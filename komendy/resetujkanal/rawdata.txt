@@ -1,0 +1,150 @@
+{
+  "name": "resetujkanal",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "rUWea",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "title": "Error!",
+      "author": "",
+      "color": "RED",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error1",
+      "message": "Nie masz uprawnień!\nWymagane Uprawnienia: **Administrator**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "nazwa",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "kanalclone",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "kategoria",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "pozycja",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "topic",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "3",
+      "varName": "kanalclone",
+      "reason": "",
+      "name": "Delete Channel"
+    },
+    {
+      "channelName": "${tempVars(\"nazwa\")}",
+      "topic": "${tempVars(\"topic\")}",
+      "position": "${tempVars(\"pozycja\")}",
+      "storage": "1",
+      "varName": "nowy",
+      "categoryID": "${tempVars(\"kategoria\")}",
+      "reason": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "title": "Zresetowano kanał!",
+      "author": "",
+      "color": "GREEN",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed_final",
+      "name": "Create Embed Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "user1",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "user2",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "embed_final",
+      "message": "Kanał został zresetowany przez:** ${tempVars(\"user1\")} ・ ${tempVars(\"user2\")} **",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed_final",
+      "channel": "5",
+      "varName2": "nowy",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0"
+}

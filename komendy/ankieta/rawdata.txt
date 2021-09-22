@@ -1,0 +1,167 @@
+{
+  "name": "ankieta",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "YoTcy",
+  "actions": [
+    {
+      "comment": "Zmień nazwe custom emotki na #11 #12 i rangi #3 do permisji",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "1",
+      "find": "ankieta.all",
+      "storage": "1",
+      "varName": "ankieta",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "ankieta",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member has Role MOD"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "RED",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "error.perms",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error.perms",
+      "message": "${member}, **Aby użyć komendę ( ankieta.all) musisz posiadać permisje** ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error.perms",
+      "channel": "1",
+      "varName2": "errorperms",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "tytul",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "opis ankiety",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "____",
+      "storage": "1",
+      "varName": "tak",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "X__",
+      "storage": "1",
+      "varName": "nie",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "BLUE",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/872925783583244318/877639187787022346/emp.jpg",
+      "storage": "1",
+      "varName": "wiadomoscankiety",
+      "name": "Create Embed Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memberusername",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "wiadomoscankiety",
+      "message": "**= = = [ ANKIETA ] = = =** \n\nAuthor: **${tempVars(\"memberusername\")}**\n\nTytuł: `${tempVars(\"tytul\")}`\n\nOpis: `*${tempVars(\"opis ankiety\")}*`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "wiadomoscankiety",
+      "message": "Tak / Nie ",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "wiadomoscankiety",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "ankieta",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "ankieta",
+      "emoji": "1",
+      "varName2": "6940_agree",
+      "varName3": "tak",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "ankieta",
+      "emoji": "1",
+      "varName2": "nie",
+      "varName3": "nie",
+      "name": "Add Reaction"
+    }
+  ],
+  "comType": "0"
+}

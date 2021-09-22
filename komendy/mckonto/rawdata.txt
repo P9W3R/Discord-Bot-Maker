@@ -1,0 +1,147 @@
+{
+  "name": "mckonto",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "RQILk",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "",
+      "author": "Error!",
+      "color": "",
+      "url": "",
+      "authorIcon": "https://media.discordapp.net/attachments/845012492942049291/845790035616989253/mc.png",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embederror",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embederror",
+      "fieldName": "",
+      "message": "Dodaj nazwę konta...",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embederror",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "nick",
+      "name": "Store Command Params"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mojang.com/users/profiles/minecraft/${tempVars(\"nick\")}",
+      "path": "id",
+      "storage": "1",
+      "varName": "id",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mojang.com/user/profiles/${tempVars(\"id\")}/names",
+      "path": "*.name",
+      "storage": "1",
+      "varName": "namechanges",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "",
+      "author": "● Informacje o: ${tempVars(\"nick\")}",
+      "color": "GREEN",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "https://media.discordapp.net/attachments/845012492942049291/845790035616989253/mc.png",
+      "imageUrl": "https://visage.surgeplay.com/full/256/${tempVars(\"id\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Historia nicków:",
+      "message": "${tempVars(\"namechanges\") || \"Error fetching data...\"}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "UUID:",
+      "message": "${tempVars(\"id\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "NameMC Link:",
+      "message": "[NameMC](https://es.namemc.com/profile/${tempVars(\"id\")}) ",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "namemc",
+    "Minecraft",
+    "minecraft"
+  ],
+  "_timeRestriction": 1
+}
