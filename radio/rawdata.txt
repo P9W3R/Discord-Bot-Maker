@@ -1,0 +1,68 @@
+{
+  "name": "radio",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "nxJSU",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "https://rs6-krk2.rmfstream.pl/RMFMAXXX48",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "1",
+      "name": "Play URL"
+    },
+    {
+      "title": "🎧 | Gram własnie RMF MAXXX!",
+      "author": "",
+      "color": "#d4af37",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "rmfmaxxx",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "rmfmaxxx",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "comment": "LISTA POLSKICH RADIO STACJI: https://pastebin.com/PEd6PVhe",
+      "color": "#fecb01",
+      "name": "Comment"
+    },
+    {
+      "comment": "Jesli potrzebujesz pomocy pisz do mnie na discordzie * azkonaz#0770 *",
+      "color": "#fecb01",
+      "name": "Comment"
+    }
+  ],
+  "event-type": "0",
+  "comType": "0"
+}
