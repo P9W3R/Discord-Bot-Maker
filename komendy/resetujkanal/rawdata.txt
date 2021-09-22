@@ -7,7 +7,7 @@
     {
       "member": "1",
       "varName": "",
-      "permission": "ADMINISTRATOR",
+      "permission": "MANAGE_CHANNELS",
       "iftrue": "2",
       "iftrueVal": "6",
       "iffalse": "0",
@@ -30,7 +30,7 @@
     {
       "storage": "1",
       "varName": "error1",
-      "message": "Nie masz uprawnień!\nWymagane Uprawnienia: **Administrator**",
+      "message": "Brak Uprawnień!\nWymagane Uprawnienia: **Zarządzanie kanałem**",
       "name": "Set Embed Description"
     },
     {
@@ -58,7 +58,7 @@
       "varName": "",
       "info": "0",
       "storage": "1",
-      "varName2": "kanalclone",
+      "varName2": "kanalclose",
       "name": "Store Channel Info"
     },
     {
@@ -78,22 +78,25 @@
       "name": "Store Channel Info"
     },
     {
-      "channel": "0",
-      "varName": "",
-      "info": "3",
       "storage": "1",
-      "varName2": "topic",
-      "name": "Store Channel Info"
+      "varName": "kategoria",
+      "comparison": "1",
+      "value": "tempVars(\"kategoria\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "name": "Check Variable"
     },
     {
       "storage": "3",
-      "varName": "kanalclone",
+      "varName": "kanalclose",
       "reason": "",
       "name": "Delete Channel"
     },
     {
       "channelName": "${tempVars(\"nazwa\")}",
-      "topic": "${tempVars(\"topic\")}",
+      "topic": "",
       "position": "${tempVars(\"pozycja\")}",
       "storage": "1",
       "varName": "nowy",
@@ -117,23 +120,28 @@
     {
       "member": "1",
       "varName": "",
-      "info": "0",
-      "storage": "1",
-      "varName2": "user1",
-      "name": "Store Member Info"
-    },
-    {
-      "member": "1",
-      "varName": "",
       "info": "21",
       "storage": "1",
       "varName2": "user2",
       "name": "Store Member Info"
     },
     {
+      "title": "Zresetowano kanał!",
+      "author": "",
+      "color": "GREEN",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
       "storage": "1",
       "varName": "embed_final",
-      "message": "Kanał został zresetowany przez:** ${tempVars(\"user1\")} ・ ${tempVars(\"user2\")} **",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed_final",
+      "message": "Kanał został zresetowany przez: ${tempVars(\"user2\")}",
       "name": "Set Embed Description"
     },
     {
@@ -141,6 +149,53 @@
       "varName": "embed_final",
       "channel": "5",
       "varName2": "nowy",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "3",
+      "varName": "kanalclose",
+      "reason": "",
+      "name": "Delete Channel"
+    },
+    {
+      "channelName": "${tempVars(\"nazwa\")}",
+      "topic": "",
+      "position": "${tempVars(\"pozycja\")}",
+      "storage": "1",
+      "varName": "new",
+      "categoryID": "",
+      "reason": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "title": "Zresetowano kanał!",
+      "author": "",
+      "color": "GREEN",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed_koniec",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed_koniec",
+      "message": "Kanał został zresetowany przez: ${tempVars(\"user2\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed_koniec",
+      "channel": "5",
+      "varName2": "new",
       "storage3": "0",
       "varName3": "",
       "name": "Send Embed Message"
